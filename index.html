@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Organizer</title>
+        <link href="assets/css/index.css" type="text/css" rel="stylesheet">
+        <script src="script/index.js"></script>
+    </head>
+    <body>
+        <!-- page flow -->
+        <header>
+            <button id="delete-all">Delete all</button>
+        </header>
+        <main>
+            <ol id="note-list"></ol>
+        </main>
+        <button class="round" id="add-note">+</button>
+        <!-- overlay -->
+        <div id="add-note-overlay" hidden>
+            <div class="overlay">
+                <div>
+                    <label for="note-header">Header:</label>
+                    <input type="text" id="note-header" required>        
+                </div>
+                <div>
+                    <label for="note-desc">Decription:</label>
+                    <input type="text" id="note-desc">        
+                </div>
+                <div>
+                    <label for="note-prty">Priority:</label>
+                    <input type="number" id="note-prty" min="0">    
+                </div>
+                <div>
+                    <button class="round" id="apply-add">✓</button>
+                    <button class="round" id="cancel-add">✕</button>
+                </div>
+            </div>
+        </div>
+        <!-- row template -->
+        <template id="note-template">
+            <li>
+                <h1>TITLE</h1>
+                <p>DESCRIPTION</p>
+                <p>PRIORITY</p>
+            </li>
+        </template>
+    </body>
+</html>
